@@ -13,3 +13,5 @@ Mobilbarat klasszikus Hangman/Akasztofa jatek GitHub Pages-hez.
 ## Inditas
 
 Nyisd meg az `index.html` fajlt bongeszoben.
+
+GitHub Pages deploy trigger.
