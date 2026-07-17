@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#172033">
+    <title>Akasztófa</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" aria-label="Klasszikus akasztófa játék">
+      <section class="game">
+        <header class="header">
+          <div>
+            <p class="eyebrow">Classic</p>
+            <h1>Akasztófa</h1>
+          </div>
+          <button id="newButton" class="icon-button" type="button" aria-label="Új játék">↺</button>
+        </header>
+
+        <section class="stats" aria-label="Játék állása">
+          <div class="stat">
+            <span>Hiba</span>
+            <strong><b id="misses">0</b>/6</strong>
+          </div>
+          <div class="stat">
+            <span>Győzelem</span>
+            <strong id="wins">0</strong>
+          </div>
+          <div class="stat">
+            <span>Sorozat</span>
+            <strong id="streak">0</strong>
+          </div>
+        </section>
+
+        <section class="toolbar" aria-label="Kategória">
+          <button class="segment active" data-category="all" type="button">Vegyes</button>
+          <button class="segment" data-category="animals" type="button">Állatok</button>
+          <button class="segment" data-category="cities" type="button">Városok</button>
+          <button class="segment" data-category="objects" type="button">Tárgyak</button>
+        </section>
+
+        <section class="stage">
+          <svg class="gallows" viewBox="0 0 220 190" role="img" aria-label="Akasztófa rajz">
+            <line x1="30" y1="175" x2="190" y2="175" class="wood"></line>
+            <line x1="58" y1="175" x2="58" y2="22" class="wood"></line>
+            <line x1="58" y1="22" x2="146" y2="22" class="wood"></line>
+            <line x1="146" y1="22" x2="146" y2="48" class="wood"></line>
+            <circle id="partHead" cx="146" cy="63" r="15" class="person"></circle>
+            <line id="partBody" x1="146" y1="79" x2="146" y2="120" class="person"></line>
+            <line id="partLeftArm" x1="146" y1="90" x2="123" y2="107" class="person"></line>
+            <line id="partRightArm" x1="146" y1="90" x2="169" y2="107" class="person"></line>
+            <line id="partLeftLeg" x1="146" y1="120" x2="126" y2="150" class="person"></line>
+            <line id="partRightLeg" x1="146" y1="120" x2="166" y2="150" class="person"></line>
+          </svg>
+        </section>
+
+        <section class="message" aria-live="polite">
+          <strong id="statusTitle">Találd ki a szót</strong>
+          <span id="statusText">Válassz betűt a billentyűzetről.</span>
+        </section>
+
+        <section id="word" class="word" aria-label="Kitalálandó szó"></section>
+        <section id="keyboard" class="keyboard" aria-label="Betűk"></section>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
